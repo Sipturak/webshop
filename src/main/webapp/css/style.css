@@ -1,0 +1,133 @@
+*{
+    margin-left: 0;
+    margin-right: 0;
+}
+.navbar{
+    background-image: linear-gradient(to bottom,#fff 0,#f8f8f8 100%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar > .container-navbar{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar-header{
+    display: inline-block;
+}
+
+.navbar-colapse{
+    display: inline-block;
+    width: 90%;     
+}
+
+li{
+    display: inline-block;
+}
+ul{
+    display: inline-block;
+}
+.space{
+    padding-left: 55px;
+}
+.navbar-header > a {
+    font-size: 1.5em;
+}
+a{
+    text-decoration: none;
+    color: #808080;
+    font-size:1.1em  
+}
+a:hover{
+    color: black;
+}
+.navbar-right{
+    float: right;
+}
+
+
+.wrapper{
+    height: 100%;
+    background: url('../images/watch.jpeg')
+        no-repeat center center fixed
+        ;
+    background-size: cover;
+    top: 50px;
+}
+
+.header{
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #64966f;
+    position: relative;
+    top: 50%;
+    
+
+    
+}
+.header > a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    border: 2px solid white;
+    padding:5 20px 5 20px;
+    margin-top: 20px;
+    border: 
+}
+.head{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.container{
+    height: 80%;
+}
+.row{
+    width: 100%;
+    height: 70%;
+    text-align: center;
+}
+.col{
+    display: inline-block;
+    width: 25%;
+    margin: 30px;
+    margin-top: 0px;
+}
+.desc{
+    text-align: left;
+}
+p{
+    position: relative;
+    bottom: 20px;
+}
+span{
+    position: relative;
+    bottom: 20px;
+    color: red;
+}
+
+footer{
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+ background-image: linear-gradient(to bottom,#fff 0,#f8f8f8 100%);}
+
+footer > .temp{
+    margin: 0;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+

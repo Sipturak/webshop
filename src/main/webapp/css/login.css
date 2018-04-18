@@ -1,0 +1,49 @@
+.main{
+    position: relative;
+    top: 300px;
+    text-align: center;   
+}
+img{
+    height: 200px;
+}
+
+h1{
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 1.75em;
+}
+
+form{
+    max-width: 330px;
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-input{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -1px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.row{
+    border: 1px solid black;
+}
+
+.form-btn{
+    
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border-color: #007bff;
+    border-radius: .5em;
+    color: #fff;
+    
+}
