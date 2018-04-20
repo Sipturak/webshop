@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.shop.helper.DbEnum;
 import com.shop.helper.HelperConnectionDb;
 import com.shop.model.Card;
 import com.shop.model.User;
@@ -12,7 +13,7 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 	
 	
 	public UserRepository() throws SQLException {
-		super(HelperConnectionDb.getDatabase.getConnection("jdbc:mysql://localhost/shop", "root", "15109215"));
+		super(HelperConnectionDb.getDatabase.connect(DbEnum.MySql));
 	}
 	
 	/* (non-Javadoc)

@@ -1,0 +1,40 @@
+.container1{
+    width: 100%;
+    height: 800px;
+    text-align: center;
+}
+
+.product_image{
+    width: 70%;
+    margin-top: 100px;
+    display: inline-block;
+}
+.description{
+    position: relative;
+    right: 20%;;
+    height: 50%;
+    width: 200px;
+    margin-top: 200px;
+    float: right;
+    text-align: left;
+}
+img{
+    margin-right: 10%;
+}
+.product_name{
+    margin-bottom: 50px;
+}
+.size_and_buy > p {
+    margin-top: 20px;
+}
+
+button{
+    width: 100%;
+    height: 35px;
+    background: black;
+    color: white;
+}
+button:hover{
+    background: #693131;
+}
+

@@ -7,18 +7,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.shop.helper.DbEnum;
 import com.shop.helper.HelperConnectionDb;
 import com.shop.model.Product;
 import com.shop.model.Watch;
 
 public class ProductRepository extends Provider implements ProductRepositoryInterface {
 
-	public ProductRepository(Connection conn) {
-		super(conn);
-		// TODO Auto-generated constructor stub
-	}
+
 	public ProductRepository() throws SQLException {
-		this(HelperConnectionDb.getDatabase.getConnection("jdbc:mysql://localhost/shop", "root", "15109215"));
+		super(HelperConnectionDb.getDatabase.connect(DbEnum.MySql));
 	}
 	
 	
@@ -39,7 +37,7 @@ public class ProductRepository extends Provider implements ProductRepositoryInte
 	}
 	
 	public void close() throws SQLException {
-		HelperConnectionDb.getDatabase.getConnection("jdbc:mysql://localhost/shop", "root", "15109215").close();
+		HelperConnectionDb.getDatabase.connect(DbEnum.MySql).close();
 	}
 	
 	
