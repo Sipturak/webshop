@@ -1,30 +1,33 @@
 package com.shop.model;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 public abstract class Product {
 
 	private String name;
 	private String description;
 	private String img_url;
 	private double price;
+	private int numberOfProduct;
+	private int id;
 
-	public Product(String name, String description, String img_url, double price) {
+	public Product(String name, String description, String img_url, double price, int numberOfProduct,int id) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.img_url = img_url;
 		this.price = price;
+		this.numberOfProduct = numberOfProduct;
+		this.id = id;
 	}
+
 	public Product(String name, String description, String img_url) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.img_url = img_url;
 	}
-	
-	public Product() {}
+
+	public Product() {
+	}
 
 	public String getName() {
 		return name;
@@ -41,4 +44,15 @@ public abstract class Product {
 	public double getPrice() {
 		return price;
 	}
+
+	public int getNumberOfProduct() {
+		return numberOfProduct;
+	}
+
+	public int getId() {
+		return id;
+	} 
+	
+	
+
 }

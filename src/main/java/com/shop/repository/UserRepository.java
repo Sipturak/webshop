@@ -13,7 +13,7 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 	
 	
 	public UserRepository() throws SQLException {
-		super(HelperConnectionDb.getDatabase.connect(DbEnum.MySql));
+		super(HelperConnectionDb.getDatabase.connect(DbEnum.Mysql));
 	}
 	
 	/* (non-Javadoc)
@@ -52,7 +52,10 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 	
 	@Override
 	public void updateUser(String sql, double money,String id) throws SQLException {
-		super.update(sql, money,id);
+		PreparedStatement pr = super.getPreparedStatement(sql);
+		pr.setDouble(1, money);
+		pr.setString(2, id);
+		pr.executeUpdate();
 	}
 	
 	@Override
@@ -62,7 +65,7 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 		
 		if(rs.next())
 			return true;
-		
+		rs.close();
 		return false;
 	}
 	
@@ -74,7 +77,7 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 		if(rs.next()) {
 			return rs.getDouble("money");
 		}
-		
+		rs.close();
 		return 0;
 	}
 	
@@ -88,7 +91,7 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 		if(rs.next()) {
 			card = getCard(sql1, rs.getString("number_of_card"));
 		}
-		
+		rs.close();
 		user = new User(card);
 		
 		return user;
@@ -104,7 +107,7 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 			card.getMoney().setMoney(rs.getDouble("total"));
 			return card;
 		}
-		
+		rs.close();
 		throw new NullPointerException();
 	}
 	

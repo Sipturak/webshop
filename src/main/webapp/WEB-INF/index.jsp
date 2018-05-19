@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -28,11 +29,10 @@
                 <div class="col">
                        <div class="image">
                         <button type="submit" name="f12" value="0" style="border:0; background: white;">
+                       			<!-- some stupid picture for no more products -->
                        		<img alt="" src="${products[0].img_url}">
                        </button>
-                       
                        </a>
-                      
                     </div>
                     <div class="desc">
                        <a href="">

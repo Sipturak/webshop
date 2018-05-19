@@ -29,6 +29,8 @@
                 <form action="BuyServlet" method="post">
                     <button  type="submit" >Buy</button>
                     <input type="hidden" name="price_item" value="${product_item.price}">
+                    <input type="hidden" name="product_number" value="${product_item.numberOfProduct}">
+                    <input type="hidden" name="product_id" value="${product_item.id}">
                 </form>
             </div>
         </div>

@@ -9,4 +9,6 @@ public interface ProductServiceInterface {
 
 	List<Product> getAllProducts(String sql) throws SQLException;
 
+	void update(String sql, String id, int numberOfProducts) throws SQLException;
+
 }

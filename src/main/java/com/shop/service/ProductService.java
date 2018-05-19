@@ -28,5 +28,11 @@ public class ProductService implements ProductServiceInterface {
 	public List<Product> getAllProducts(String sql) throws SQLException {
 		return service.getAllProducts(sql);
 	}
+	
+	@Override
+	public void update(String sql, String id, int numberOfProducts) throws SQLException {
+		service.updateNumbersOfProduct(sql, id, numberOfProducts);
+	}
+
 
 }

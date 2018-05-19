@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.shop.helper.HelperClass;
 import com.shop.model.Product;
 import com.shop.model.Watch;
-import com.shop.service.ProductService;
+import com.shop.service.ProductServiceInterface;
 import com.shop.service.UserService;
 
 /**
@@ -22,7 +22,7 @@ import com.shop.service.UserService;
 public class PageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
-	private ProductService service;
+	private ProductServiceInterface service;
 	
 	@Override
 	public void init() throws ServletException {

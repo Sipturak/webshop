@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.shop.service.ProductService;
+import com.shop.service.ProductServiceInterface;
 import com.shop.service.UserService;
 import com.shop.service.UserServiceInterface;
 
@@ -17,7 +18,7 @@ public class HelperClass {
 		context = new ClassPathXmlApplicationContext("appContext.xml");
 	}
 	
-	public ProductService service () {
+	public ProductServiceInterface service () {
 		return context.getBean("productService", ProductService.class);
 	}
 	
