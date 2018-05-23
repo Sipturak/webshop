@@ -2,6 +2,6 @@ package com.shop.helper;
 
 public enum DbEnum {
 	
-	Mysql,Oracle
+	Mysql
 	
 }

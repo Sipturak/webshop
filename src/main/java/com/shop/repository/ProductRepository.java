@@ -37,7 +37,6 @@ public class ProductRepository extends Provider implements ProductRepositoryInte
 			watch = new Watch(rs.getString("name"), rs.getString("description"), rs.getString("img_url"), rs.getDouble("price"),rs.getInt("numberOfProduct"),rs.getInt("id"));
 			list.add(watch);
 		}
-		rs.close();
 		return list;
 	}
 	

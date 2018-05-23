@@ -65,7 +65,6 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 		
 		if(rs.next())
 			return true;
-		rs.close();
 		return false;
 	}
 	
@@ -77,7 +76,6 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 		if(rs.next()) {
 			return rs.getDouble("money");
 		}
-		rs.close();
 		return 0;
 	}
 	
@@ -91,7 +89,6 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 		if(rs.next()) {
 			card = getCard(sql1, rs.getString("number_of_card"));
 		}
-		rs.close();
 		user = new User(card);
 		
 		return user;
@@ -107,7 +104,6 @@ public class UserRepository extends Provider implements UseerRepositoryInterface
 			card.getMoney().setMoney(rs.getDouble("total"));
 			return card;
 		}
-		rs.close();
 		throw new NullPointerException();
 	}
 	

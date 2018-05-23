@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.shop.helper.HelperClass;
+import com.shop.helper.ItemClass;
+import com.shop.helper.ProductBaseClass;
 import com.shop.model.Product;
 import com.shop.model.Watch;
 import com.shop.service.ProductServiceInterface;
@@ -21,6 +23,7 @@ import com.shop.service.UserService;
  */
 public class PageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String sessionItemName = "product_item";
     
 	private ProductServiceInterface service;
 	
@@ -41,24 +44,8 @@ public class PageServlet extends HttpServlet {
 		
 		try {
 			List<Product> list = service.getAllProducts(sql);
-				if(click.equals("0")) {
-					request.setAttribute("product_item", list.get(0));
-				}
-				else if(click.equals("1")) {
-					request.setAttribute("product_item", list.get(1));
-				}
-				else if(click.equals("2")) {
-					request.setAttribute("product_item", list.get(2));
-				}
-				else if(click.equals("3")) {
-					request.setAttribute("product_item", list.get(3));
-				}
-				else if(click.equals("4")) {
-					request.setAttribute("product_item", list.get(4));
-				}
-				else {
-					request.setAttribute("product_item", list.get(5));
-				}
+			ProductBaseClass item = new ItemClass(list, Integer.parseInt(click), sessionItemName);
+			item.executeSet(request);
 				
 		} catch (SQLException e2) {
 			// TODO Auto-generated catch block
